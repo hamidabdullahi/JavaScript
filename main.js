@@ -159,9 +159,32 @@
 //   if (i % 2 === 0) console.log("The number is", i);
 //   i--;
 // }
+
 //! while do
 // let i = 100;
 // do {
 //   if (i % 2 === 0) console.log("The number is", i);
 //   i--;
 // } while (i >= 50);
+
+//! for in
+// const user = {
+//   name: "Hamid",
+//   age: 17,
+//   work: "code",
+// };
+// for (const key in user) {
+//   console.log(user[key]);
+// }
+
+//! for in
+// const role = ["Teacher", "ADMIN", "Manager"];
+// for (const key in role) {
+//   console.log(key, role[key]);
+// }
+
+//! for of
+// const role = ["Teacher", "ADMIN", "Manager"];
+// for (const key of role) {
+//   console.log(key);
+// }
