@@ -119,7 +119,7 @@ switch (point) {
   case "20":
   case "19":
   case "18": {
-    console.log("عالی عزیزم");
+    console.log("Very Good!");
     break;
   }
   case "17":
@@ -130,7 +130,7 @@ switch (point) {
   case "12":
   case "11":
   case "10": {
-    console.log("ریدی مغز سیس");
+    console.log("Not Bad");
     break;
   }
   case "9":
@@ -143,7 +143,7 @@ switch (point) {
   case "2":
   case "1":
   case "0": {
-    console.log("ای کیرم بو مغزته");
+    console.log("Very Bad!!!");
     break;
   }
 }
