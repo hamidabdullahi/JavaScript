@@ -188,3 +188,57 @@
 // for (const key of role) {
 //   console.log(key);
 // }
+
+//! funcion
+// function sayHello(name) {
+//   console.log("Hi " + name + " From Hamid");
+// }
+// sayHello("Mohammad");
+// sayHello("Ali");
+
+//? Challenge
+// function masahatCircle(R) {
+//   console.log(3.14 * R ** 2);
+// }
+// masahatCircle(15);
+
+//? Challenge return
+// function getUserRole(role) {
+//   if (role === "ADMIN") {
+//     return "The user is ADMIN";
+//   } else if (role === "MANAGER") {
+//     return "The user is MANAGER";
+//   } else if (role === "TEACHER") {
+//     return "The user is TEACHER";
+//   } else {
+//     return "Unkmown user role";
+//   }
+// }
+// const userRole = getUserRole("ADMIN");
+// console.log(userRole);
+
+//* we can also write like this:
+// function getUserRole(role) {
+//   if (role === "ADMIN") return "The user is ADMIN";
+//   if (role === "MANAGER") return "The user is MANAGER";
+//   if (role === "TEACHER") return "The user is TEACHER";
+//   return "Unkmown user role";
+// }
+// const userRole = getUserRole("ADMIN");
+// console.log(userRole);
+
+//? Challenge switvh case return
+// function getUserRole(role) {
+//   switch (role) {
+//     case "ADMIN": {
+//       return "The user is ADMIN";
+//     }
+//     case "MANAGER": {
+//       return "The user is MANAGER";
+//     }
+//     default:
+//       return "Unknown user role";
+//   }
+// }
+// const userRole = getUserRole("ADMIN");
+// console.log(userRole);
