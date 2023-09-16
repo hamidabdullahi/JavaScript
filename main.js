@@ -196,7 +196,7 @@
 // sayHello("Mohammad");
 // sayHello("Ali");
 
-//? Challenge
+//? Challenge function
 // function masahatCircle(R) {
 //   console.log(3.14 * R ** 2);
 // }
@@ -242,3 +242,36 @@
 // }
 // const userRole = getUserRole("ADMIN");
 // console.log(userRole);
+
+//? Challenge max Number
+// function number(a, b) {
+//   if (a > b) return a;
+//   return b;
+
+//*   return a > b ? a : b;
+// }
+//* console.log(number(10, 50));
+
+//? Challenge fizzBuzz
+// function fizzBuzz(number) {
+//   if (typeof number !== "number") return "This is not Number";
+//   if (number % 3 === 0 && number % 5 === 0) return "FizzBuzz";
+//   if (number % 3 === 0) return "fizz";
+//   if (number % 5 === 0) return "Bizz";
+// }
+// console.log(fizzBuzz(15));
+
+//? Hard Challenge of Discount
+// function discount(Price) {
+//   const minPrice = 50;
+//   const discountPerPrice = 10;
+//   const discountStep = 5;
+//   const maxDiscount = 30;
+//   if (Price < minPrice) return "No Discount";
+//   const userDiscount = Math.floor(
+//     ((Price - minPrice) / discountPerPrice) * discountStep
+//   );
+//   if (userDiscount > maxDiscount) return "Max Discount";
+//   return "Your Discount is " + userDiscount;
+// }
+// console.log(discount(500));
