@@ -275,3 +275,90 @@
 //   return "Your Discount is " + userDiscount;
 // }
 // console.log(discount(500));
+
+//! object function
+// const user = {
+//   name: "Hamid",
+//   price: 200,
+//   discount: 10,
+//   age: 18,
+//   job: "coding",
+//   course: {
+//     id: 1,
+//     back: "Back-End",
+//     mobile: "Kotlin",
+//   },
+//   calcOffPrice: function () {
+//     this.offPrice = this.price * (1 - this.discount / 100);
+//     return this.offPrice;
+//   },
+// };
+// console.log(user.calcOffPrice());
+
+//! factory function
+//! we can write title: title or title,
+//! we can delete fanction like this:
+// function creatCourse(title, price, discount) {
+//   return {
+//     title,
+//     price,
+//     discount,
+//     calcOffPrice() {
+//       return price * (1 - discount / 100);
+//     },
+//   };
+// }
+// console.log(creatCourse("Hamid", 200, 30).calcOffPrice());
+// console.log(creatCourse("Navid", 500, 40).calcOffPrice());
+
+//! constractor function
+// function creatCourse(title, price, discount) {
+//   this.title = title;
+//   this.price = price;
+//   this.discount = discount;
+//   this.calcOffPrice = function calcOffPrice() {
+//     return price * (1 - discount / 100);
+//   };
+// }
+
+// const course1 = new creatCourse("React.js", 200, 10);
+// console.log(course1.calcOffPrice());
+//! for check :
+// console.log(course1.hasOwnProperty("title"));
+//! get keys or values :
+// console.log(Object.keys(course1));
+// console.log(Object.values(course1));
+// console.log(Object.entries(course1));
+
+//! canstactor function
+// const stringLit = "Hamid";
+// const stringObj = new String("Hamid");
+// console.log(stringLit, typeof stringLit);
+// console.log(stringObj, typeof stringObj);
+
+// const numLit = 50;
+// const numObj = new Number(50);
+// console.log(numLit, typeof numLit);
+// console.log(numObj, typeof numObj);
+
+// const booleanLit = true;
+// const booleanOpj = new Boolean(true);
+// console.log(booleanLit, typeof booleanLit);
+// console.log(booleanOpj, typeof booleanOpj);
+
+// const arreyLit = ["A", "B", "C", "D"];
+// const arreyOpj = new Array(["A", "B", "C", "D"]);
+// console.log(arreyLit, typeof arreyLit);
+// console.log(arreyOpj, typeof arreyOpj);
+
+//! how to copy and change in Object and this method is for object not for string - string use noral method
+// const user = {
+//   name: "Hamid",
+//   age: 18,
+//   friends: ["Ali", "Mhmd", "Gara"],
+// };
+
+// const userCopied = Object.assign({}, user);
+// userCopied.name = "Navid";
+// console.log(user, userCopied);
+//* if we want to change the array(friends) we should use deep copy no shadow copy
