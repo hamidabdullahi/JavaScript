@@ -362,3 +362,89 @@
 // userCopied.name = "Navid";
 // console.log(user, userCopied);
 //* if we want to change the array(friends) we should use deep copy no shadow copy
+
+//! Object desctructuring => we can say ther name any time easy
+// const user = {
+//   name: "Hamid",
+//   price: 200,
+//   discount: 10,
+//   age: 18,
+//   job: "coding",
+//   friend: ["Hamid", "Ali", "Gara"],
+//   course: {
+//     id: 1,
+//     back: "Back-End",
+//     mobile: "Kotlin",
+//   },
+//   showWellcomeMessage({ name, phoneNumber = "No phone", email = "No email" }) {
+//     console.log(`Welcome ${name} with ${email} and ${phoneNumber}`);
+//* we can also write Message insted of + and "" and we can use ${} and `
+//   },
+// };
+
+// const { name, age, course, friend = ["MHMD"] } = user;
+//* we can set defualt for arrat like this "friend OBJ"
+// console.log(user, friend);
+// console.log(course.back);
+// user.showWellcomeMessage({
+//   name: "Hamid",
+//   phoneNumber: "09189189898",
+//   email: "Fake@gmail.com",
+// });
+//
+
+//!array desctructuring 1
+// const num = [1, 2, 3, [4, 5]];
+// const [a, b = 7, c, [d, e]] = num;
+// console.log(a, b, c, d, e);
+
+// //! array desctructuring 2
+// const user = {
+//   student: ["Hamid", "Ali", "MHMD"],
+//   tag: ["Front-End", "Back-End", "Web Developer"],
+//   showOrderMessage(studentIndex, tagIndex) {
+//     return [this.student[studentIndex], this.tag[tagIndex]];
+//   },
+// };
+// const [studentD, tagD] = user.showOrderMessage(2, 0);
+// console.log(studentD, tagD);
+
+//! spread operators
+//* 1 add some data to end of the first:
+const arr = [4, 5];
+const arr2 = [1, 2, 3, ...arr];
+console.log(arr2);
+
+//* 2 pass all array index as arguments:
+const arr3 = [1, 2, 3, 4, 5];
+console.log(...arr3);
+
+//* 3 add/push item ro array
+const arr4 = [1, 2, 3, 4, 5];
+const newArr4 = [...arr4, "Full Stack"];
+console.log(newArr4);
+
+//* 4 copy of them
+const arr5 = [1, 2, 3, 4, 5];
+const copyArr5 = [...arr5]; //shadow copy => if you change in "copyArr5" the "arr5" is not changing
+console.log(copyArr5);
+
+//* 5 join array to array
+const frontEnd = ["HTML", "CSS", "JS"];
+const backEnd = ["next.js", "php", "c++"];
+console.log([...frontEnd, ...backEnd]);
+
+//! Also we can use this all methods for Ssting / Not for OBJ
+//* 6 string
+const str = "Hamid";
+console.log(...str); // and we can add => (... str, "Navid")
+console.log([...str]); // and we can add => ([... str, "Navid"])
+
+//* 7 OBJ
+const user = {
+  name: "Hamid",
+  id: 1,
+};
+const newUSer = { ...user };
+newUSer.email = "Fake@gmail.com";
+console.log(user, newUSer);
