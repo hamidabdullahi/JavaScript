@@ -595,9 +595,31 @@
 //* json => {name, email, role}
 //*jsom => [{name, email, role}, {name, email, role}, {name, email, role}]
 
-const user = [
-  { name: "Hamid", age: 18 },
-  { name: "Gara", age: 19 },
-  { name: "Ali", age: 20 },
-];
-console.log(user);
+// const user = [
+//   { name: "Hamid", age: 18 },
+//   { name: "Gara", age: 19 },
+//   { name: "Ali", age: 20 },
+// ];
+// console.log(user);
+
+//? Challenge
+// const Hamid = { name: "Hamid abdullahi" },
+//   Ali = { name: "Ali ahmadi" },
+//   Gara = { name: "Gara kyani" },
+//   Mohammad = { name: "Mohammad bazrgan" },
+//   Peshawa = { name: "Peshawa NF" },
+//   Raman = { name: "Raman NF" };
+
+// const userRole = new Map([
+//   [Hamid, "Admin"],
+//   [Ali, "Manager"],
+//   [Gara, "Admin"],
+//   [Mohammad, "Editor"],
+//   [Peshawa, "Editor"],
+//   [Raman, "Teacher"],
+// ]);
+//* we can like this:
+// const newUserRole = [...new Set(userRole.values())];
+// console.log(newUserRole);
+//* and also we can write like this:
+// console.log([...new Set(userRole.values())]);
