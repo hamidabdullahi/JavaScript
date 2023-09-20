@@ -411,40 +411,143 @@
 
 //! spread operators
 //* 1 add some data to end of the first:
-const arr = [4, 5];
-const arr2 = [1, 2, 3, ...arr];
-console.log(arr2);
+// const arr = [4, 5];
+// const arr2 = [1, 2, 3, ...arr];
+// console.log(arr2);
 
 //* 2 pass all array index as arguments:
-const arr3 = [1, 2, 3, 4, 5];
-console.log(...arr3);
+// const arr3 = [1, 2, 3, 4, 5];
+// console.log(...arr3);
 
 //* 3 add/push item ro array
-const arr4 = [1, 2, 3, 4, 5];
-const newArr4 = [...arr4, "Full Stack"];
-console.log(newArr4);
+// const arr4 = [1, 2, 3, 4, 5];
+// const newArr4 = [...arr4, "Full Stack"];
+// console.log(newArr4);
 
 //* 4 copy of them
-const arr5 = [1, 2, 3, 4, 5];
-const copyArr5 = [...arr5]; //shadow copy => if you change in "copyArr5" the "arr5" is not changing
-console.log(copyArr5);
+// const arr5 = [1, 2, 3, 4, 5];
+// const copyArr5 = [...arr5]; //shadow copy => if you change in "copyArr5" the "arr5" is not changing
+// console.log(copyArr5);
 
 //* 5 join array to array
-const frontEnd = ["HTML", "CSS", "JS"];
-const backEnd = ["next.js", "php", "c++"];
-console.log([...frontEnd, ...backEnd]);
+// const frontEnd = ["HTML", "CSS", "JS"];
+// const backEnd = ["next.js", "php", "c++"];
+// console.log([...frontEnd, ...backEnd]);
 
 //! Also we can use this all methods for Ssting / Not for OBJ
 //* 6 string
-const str = "Hamid";
-console.log(...str); // and we can add => (... str, "Navid")
-console.log([...str]); // and we can add => ([... str, "Navid"])
+// const str = "Hamid";
+// console.log(...str); // and we can add => (... str, "Navid")
+// console.log([...str]); // and we can add => ([... str, "Navid"])
 
 //* 7 OBJ
-const user = {
-  name: "Hamid",
-  id: 1,
-};
-const newUSer = { ...user };
-newUSer.email = "Fake@gmail.com";
-console.log(user, newUSer);
+// const user = {
+//   name: "Hamid",
+//   id: 1,
+// };
+// const newUser = { ...user };
+// newUSer.email = "Fake@gmail.com";
+// console.log(user, newUSer);
+
+//! Rest operators
+// const firstAray = ["Hamid", "Ali"];
+// const secondAray = ["Gara", "Mohammad"];
+// const [a, ...other] = [...firstAray, ...secondAray];
+// console.log(a, other);
+
+//* Object
+// const user = {
+//   id: 1,
+//   name: "Hamid",
+//   email: "fake@gmaill.com",
+//   phoneNumber: "091899999999",
+// };
+// const { id, name, ...other } = user;
+// console.log(name, other);
+
+//* function
+// function hamid(...rest) {
+//   console.log(rest);
+// }
+// hamid(1, 2);
+// hamid(1, 2), 3, 4;
+// hamid(1, 2, 3, 4, 5, 6);
+
+//* 1:
+// function hamid(...rest) {
+//   let total = 0;
+//   for (const item of rest) total += item;
+//   console.log(total);
+// }
+// hamid(1, 2);
+// hamid(1, 2), 3, 4;
+// hamid(1, 2, 3, 4, 5, 6);
+
+//* 2;
+// function getTotalPrice(discount, ...price) {
+//   let total = 0;
+//   for (const item of price) total += item;
+//   return total * (1 - discount);
+// }
+// console.log(getTotalPrice(0.2, 100, 200, 300));
+
+//! set data structure
+// const user = new Set([1, 2, 3, 3, 4, 4, 5, 5]);
+// console.log(user);
+
+//* Size
+// console.log(user.size);
+
+//* check => has
+// console.log(user.has(2));
+
+//* add
+// console.log(user.add(8));
+
+//* delete
+// console.log(user.delete(2));
+// console.log(user);
+
+//* clear
+// user.clear();
+// console.log(user);
+
+//* loop
+// for (const item of user) console.log(item);
+
+//* use case
+// const roles = ["Hamid", "Ali", "Ali", "Mohammad", "Gara"];
+//* Creat unique array
+// const uniqueroles = [...new Set(roles)];
+// console.log(new Set(roles).size);
+//* Creat unique string
+// console.log([...new Set("Hamid aaadddbbhhgff")].join(""));
+
+//! map data
+// const user = new Map();
+
+//* 1 set: return updated map and key value
+// console.log(user.Set("Name", "Hamid"));
+
+//* 2 chain set
+// const randomArray = [1, 2, 3, 4, 5];
+// user
+//   .Set("Email", "fake@gmail.com")
+//   .Set("PhoneNumber", "091899999")
+//   .Set("role", "Admin")
+//   .Set(randomArray, "Dummy data");
+
+// console.log(user);
+
+//* 3 get data
+// console.log(user.get("name"));
+
+//* 4 check exist data
+// console.log(user.has("role"));
+
+//* 5 delete
+// user.delete("email");
+// console.log(user);
+
+//* 6 clear
+// user.clear();
