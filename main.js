@@ -551,3 +551,53 @@
 
 //* 6 clear
 // user.clear();
+
+//! Example of map data type
+// const Hamid = { name: "Hamid Abdullahi" },
+//   Gara = { name: "Gara Kyani" },
+//   Ali = { name: "Ali Ahmadi" };
+
+// const userRole = new Map([
+//   [Hamid, "Admin"],
+//   [Gara, "Manager"],
+//   [Ali, "Editor"],
+// ]);
+
+//* check item from the map
+// console.log(userRole.get(Hamid));
+
+//* Write keys of the map (hamid abdullahi)
+// for (const user of userRole.keys()) {
+//   console.log(user.name);
+// }
+
+//* Write role of the map (Admin | Manager | Editor)
+// for (const role of userRole.values()) {
+//   console.log(role);
+// }
+
+//* String of (user and role of the map I write)
+// for (const [user, role] of userRole.entries()) {
+//   console.log(user.name, role);
+// }
+
+//* Convert map keys to a array
+// console.log([...userRole.keys()]);
+
+//* Convert map value to array
+// console.log([...userRole.values()]);
+
+//! what type of data to select
+//* list => set | array => 1.Unique 2. ترتیب
+//* Object => object | map => key: primitive and object
+
+//! array of object : 98%
+//* json => {name, email, role}
+//*jsom => [{name, email, role}, {name, email, role}, {name, email, role}]
+
+const user = [
+  { name: "Hamid", age: 18 },
+  { name: "Gara", age: 19 },
+  { name: "Ali", age: 20 },
+];
+console.log(user);
