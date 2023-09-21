@@ -623,3 +623,27 @@
 // console.log(newUserRole);
 //* and also we can write like this:
 // console.log([...new Set(userRole.values())]);
+
+//! function declression | expression
+//* declression: => its importent where you output the function
+// function add(a, b) {
+//   console.log(a + b);
+// }
+// add(5, 4);
+
+//* expression: => you should output after the function
+// const addEpression = function (a, b) {
+//   console.log(a + b);
+// };
+// addEpression(5, 5);
+
+//* arrow function
+// const calcOffPrice = (price, discount) => {
+//   console.log(price * (1 - discount / 100));
+// };
+// calcOffPrice(300, 5);
+
+//* implicait return
+// const calcOffPrice = (price, discount) => price * (1 - discount / 100);
+// const convert = calcOffPrice(200, 5);
+// console.log(convert);
