@@ -647,3 +647,218 @@
 // const calcOffPrice = (price, discount) => price * (1 - discount / 100);
 // const convert = calcOffPrice(200, 5);
 // console.log(convert);
+
+//! lexical scope => Father and Son Example
+
+// const appName = "NOT-APP";
+
+// function outor() {
+//   if (true) {
+//     const userEmail = "fake@gmailcom";
+//     console.log(userEmail); // just in this block can write
+//   }
+//   const userRole = "Admin";
+//   console.log(appName);
+//   function inner() {
+//     const userRole = "Teacher";
+//     console.log(userRole);
+//   }
+//   inner();
+// }
+// outor();
+
+//! defualt parameter
+// function calcOffPrice(price, discount = 10) {
+//   let total = 0;
+//   for (const item of price) total += item;
+//   console.log(total * (1 - discount / 100));
+//   return total * (1 - discount / 100);
+// }
+// calcOffPrice([150, 200, 80, 410], 20);
+
+//! pass primitive and pass refrence to
+//* primitive
+
+// const userName = "Hamid";
+
+// function stringFun(str) {
+//   const newStr = `Hi ${str}`;
+//   return newStr;
+// }
+// console.log(stringFun(userName));
+// console.log(userName);
+
+//* refrence //before clg = Yes Change // After clg = No change
+// const user = {
+//   name: "Hamid",
+// };
+
+// function userCheck(obj) {
+//   obj.name = "Ali";
+//   obj.email = "fake@gmail.com";
+//   return obj;
+// }
+// function userCheck2(obj) {
+//   obj.phoneNumber = "09189995533";
+//   return obj;
+// }
+// console.log(userCheck(user));
+// console.log(userCheck2(user));
+
+// const obj = user;
+// obj.name = "Folan";
+// console.log(obj);
+
+//! first class | higher order | call back
+//* first class =>
+//? 1 میتونی مقدار فانکشن رو به یه وریبل پاس بدی
+//? 2 میتونی به فانکشن رو به یه فانکشن دیگه پاس بدی
+//? 3 میتونی یه فانکشن رو ریتورن بکنی
+//* higher order =>
+//? 1 فانکشن هایی که ممکن یه فانکشن رو به عنوان آرگومان ورودی بگیرند
+//? 2 یا یه فانکشن رو ریتورن بکنند
+//? 3 یا ممکن هر دوتای اینا رو همزمان داشته باشن
+//* هدف higher order چیه؟
+//? هدفشون abstraction
+//* call back =>
+//? فانکشن هایی هستن که به عنوان آرگومان ورودی به یه فانکشن دیگه پاس داده میشه
+
+//! higher order function | callback function
+// function sayHi() {
+//   return "Hi ";
+// }
+// function sayHello() {
+//   return "Hello ";
+// }
+//* 1 type:
+// function greeting(name) {
+//   console.log(sayHi() + name);
+//   return sayHi() + name;
+// }
+// greeting("Hamid");
+
+//* 2 type:
+// function greeting(name, FUN) {
+//   console.log(FUN() + name);
+//   return FUN() + name;
+// }
+// greeting("Hamid", sayHi);
+// greeting("Hamid", sayHello);
+
+//* 3 type:
+// function newGreeting(str) {
+//   return function (name) {
+//     console.log(str + name);
+//   };
+// }
+// const functionConvert = newGreeting("Hello ")("Hamid");
+
+//* 4 type:
+// const newGreeting = (str) => (name) => str + name;
+
+//? higher order Challenge
+// function array(list, number) {
+//   const total = [];
+//   for (const item of list) {
+//     total.push(item + number);
+//   }
+//   return total;
+// }
+// console.log(array([1, 2, 3, 4, 5], 5));
+
+//* and also we can write like this:
+// function array(list, cb, number) {
+//   const total = [];
+//   for (const item of list) {
+//     total.push(cb(item, number));
+//   }
+//   return total;
+// }
+
+// function plus(item, number) {
+//   return item + number;
+// }
+// function negetive(item, number) {
+//   return item - number;
+// }
+// function zarb(item, number) {
+//   return item * number;
+// }
+// function taghsim(item, number) {
+//   return item / number;
+// }
+// console.log(array([1, 2, 3, 4, 5], plus, 2));
+// console.log(array([1, 2, 3, 4, 5], negetive, 2));
+// console.log(array([1, 2, 3, 4, 5], zarb, 2));
+// console.log(array([1, 2, 3, 4, 5], taghsim, 2));
+
+//? Challenge function for primeNumber
+// function isPrime(number) {
+//   for (let i = 2; i < number; i++) {
+//     if (number % i == 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// function rengePrime(firstNumber, lastNumber) {
+//   const result = [];
+//   for (let i = firstNumber; i <= lastNumber; i++) {
+//     if (isPrime(i) == true) {
+//       result.push(i);
+//     }
+//   }
+//   return result;
+// }
+// console.log(rengePrime(0, 1000));
+
+//? Hard Challenge
+// const user = {
+//   name: "Hamid",
+//   getDiscount(price, discount) {
+//     const discountConvert = price * (1 - discount / 100);
+//     return `Hi Im ${this.name} and my discount is: ${discountConvert}`;
+//   },
+// };
+// console.log(user.getDiscount(200, 10));
+
+// const user2 = {
+//   name: "Gara",
+// };
+// const newgetdiscount = user.getDiscount;
+// console.log(newgetdiscount.call(user, 500, 10));
+
+//? challenge bind method
+// const user = {
+//   name: "Hamid",
+//   age: 18,
+//   getSpeed(speed) {
+//     return `${this.name} with ${this.age} and speed is ${speed}`;
+//   },
+// };
+
+// const user2 = {
+//   name: "Gara",
+//   age: 85,
+// };
+// const newGetSpeed = user.getSpeed.bind(user2);
+// console.log(newGetSpeed(50));
+
+//! closure
+// function counterReq() {
+//   let total = 0;
+//   return function () {
+//     total++;
+//     return `Your counter is ${total}`;
+//   };
+// }
+// const signUp = counterReq();
+// console.log(signUp());
+// console.log(signUp());
+// console.log(signUp());
+// const logIn = counterReq();
+// console.log(logIn());
+// console.log(logIn());
+// console.log(logIn());
+
+//!
