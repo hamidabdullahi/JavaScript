@@ -861,4 +861,78 @@
 // console.log(logIn());
 // console.log(logIn());
 
-//!
+//! basic string methods
+// const userName = "Hamid Abdullahi";
+
+//* indexOf
+// console.log(userName.indexOf("Abd"));
+
+//* lastIndex
+// console.log(userName.lastIndexOf("d"));
+
+//* slice() => No mutation
+// console.log(userName.slice(1, 10));
+// console.log(userName.slice(3));
+
+//* includes()
+// console.log(userName.includes("Hamid"));
+// console.log(userName.includes("Ham"));
+
+//* startWith
+// console.log(userName.startsWith("Hamid"));
+// console.log(userName.startsWith("Ha"));
+
+//* join | split And loewrcase | Upercase
+const newUSer = "Hamid Abdullahi from Iran";
+// console.log(newUSer.toUpperCase().split(" ").join("-"));
+// console.log(newUSer.toLowerCase().split(" ").join("-"));
+
+//? Challenge search in string
+// function checkIndex(string, searchTrem) {
+//   const indexOf = string
+//     .toLowerCase()
+//     .trim()
+//     .indexOf(searchTrem.toLowerCase().trim());
+//   if (indexOf > -1) {
+//     return `The word of ${searchTrem} is in ${string}`;
+//   }
+//   return "Not include !!!";
+// }
+
+// const str = "The Hamid is heRe AnD we HeLP hiM";
+// console.log(checkIndex(str, " hamid "));
+
+//? challenge of check Email
+// const rigEmail = "hamid33fake@gmail.com";
+
+// function checkEmail(email) {
+//   const newEmail = email.toLowerCase().trim();
+
+//   if (rigEmail === newEmail) {
+//     return "You should signUp!";
+//   }
+//   return "Wellcome new user!!!";
+// }
+// console.log(checkEmail("hamid33fake@gmail.com"));
+
+//? and Also we can write like this:
+// const rigEmail = ["hamid33fake@gmail.com"];
+
+// function checkEmail(email) {
+//   const newEmail = email.toLowerCase().trim();
+
+//   if (rigEmail.includes(newEmail)) {
+//     return "This email already exists!";
+//   } else {
+//     return "Wellcome back my bro !!!";
+//   }
+// }
+
+// console.log(checkEmail("hamid33fake@gmail.com"));
+
+//? convert the first index to Capital and others to Lower Challenge
+// function convertWord(string) {
+//   const newString = string[0].toUpperCase() + string.toLowerCase().slice(1);
+//   return newString;
+// }
+// console.log(convertWord("hAmId"));
