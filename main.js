@@ -936,3 +936,60 @@ const newUSer = "Hamid Abdullahi from Iran";
 //   return newString;
 // }
 // console.log(convertWord("hAmId"));
+
+//? challemge first index of all word => need Top function
+// const msg = "hamid abdullahi from iran and than we should";
+// function convertALLWord(string, cb) {
+//   const name = string.split(" ");
+//   const newName = [];
+//   for (const n of name) {
+//     newName.push(cb(n));
+//   }
+//   return newName.join(" ");
+// }
+// console.log(convertALLWord(msg, convertWord));
+
+//? challenge of padding string
+// function padTime(time) {
+//   let [hr, min, sec] = time.split(":");
+//   hr = hr.padStart(2, "0");
+//   min = min.padStart(2, "0");
+//   sec = sec.padStart(2, "0");
+//   const newTime = [hr, min, sec].join(":");
+//   return newTime;
+// }
+// console.log(padTime("5:8:1"));
+
+//* new challenge
+// function cardnumber(text) {
+//   const str = text.replace(" ", "").replace("-", "");
+//   const last = str.slice(-4);
+//   return last.padStart(str.length, "*");
+// }
+// console.log(cardnumber("123456789"));
+
+//! all methods of array
+
+const arr = ["A", "B", "C", "D", "E"];
+
+//* push : add element to end of array
+arr.push("F");
+console.log(arr);
+
+//* pop : remove element from end of array
+console.log(arr.pop());
+console.log(arr);
+
+//* unshift : add element to first of array
+console.log(arr.unshift("AA"));
+console.log(arr);
+
+//* unshift : remove element to first of array
+console.log(arr.shift("AA"));
+console.log(arr);
+
+//* indexOf
+console.log(arr.indexOf("C"));
+
+//* includes
+console.log(arr.includes("C"));
