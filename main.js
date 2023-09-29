@@ -883,7 +883,7 @@
 // console.log(userName.startsWith("Ha"));
 
 //* join | split And loewrcase | Upercase
-const newUSer = "Hamid Abdullahi from Iran";
+// const newUSer = "Hamid Abdullahi from Iran";
 // console.log(newUSer.toUpperCase().split(" ").join("-"));
 // console.log(newUSer.toLowerCase().split(" ").join("-"));
 
@@ -970,26 +970,162 @@ const newUSer = "Hamid Abdullahi from Iran";
 
 //! all methods of array
 
-const arr = ["A", "B", "C", "D", "E"];
+// const arr = ["A", "B", "C", "D", "E"];
 
 //* push : add element to end of array
-arr.push("F");
-console.log(arr);
+// arr.push("F");
+// console.log(arr);
 
 //* pop : remove element from end of array
-console.log(arr.pop());
-console.log(arr);
+// console.log(arr.pop());
+// console.log(arr);
 
 //* unshift : add element to first of array
-console.log(arr.unshift("AA"));
-console.log(arr);
+// console.log(arr.unshift("AA"));
+// console.log(arr);
 
 //* unshift : remove element to first of array
-console.log(arr.shift("AA"));
-console.log(arr);
+// console.log(arr.shift("AA"));
+// console.log(arr);
 
 //* indexOf
-console.log(arr.indexOf("C"));
+// console.log(arr.indexOf("C"));
 
 //* includes
-console.log(arr.includes("C"));
+// console.log(arr.includes("C"));
+
+//* splice : Mutate
+// console.log(arr.splice(1, 2, "AA", "BB"));
+// console.log(arr);
+
+//* reverse :
+// console.log(arr.reverse());
+
+//* join :
+// console.log(arr.join("-"));
+
+//* concat : Not Mutate
+// const arr2 = ["G", "H", "I"];
+// console.log(arr.concat(arr2)); //or
+// console.log([...arr, ...arr2]); // or
+// console.log(arr);
+
+//* at : get index of them
+// console.log(arr.at(1));
+
+//? access the last index of array
+//* 1 []
+// console.log(arr[arr.length - 1]);
+
+//* 2 slice
+// console.log(arr.slice(-1)[0]);
+
+//* 3 at
+// console.log(arr.at(-1));
+
+const courses = ["React.js", "Vue.js", "Next.js", "Node.js"];
+
+// const newCourses = [];
+// courses.forEach((course, index) => {
+//   newCourses.push({
+//     id: index + 1,
+//     title: course[0].toUpperCase() + course.toLowerCase().slice(1),
+//   });
+// });
+// console.log(newCourses);
+
+//! foreach on Set and Map data
+
+// const coursesSet = new Set(courses);
+// coursesSet.forEach((item, key) => {
+//   console.log(item, key);
+// });
+
+// const mapData = new Map([
+//   ["Hamid", "ADMIN"],
+//   ["Mohammad", "TEACHER"],
+//   ["GARA", "EDITOR"],
+// ]);
+
+// mapData.forEach((value, key) => {
+//   console.log(value, key);
+// });
+
+//? challenge map method
+// const users = [
+//   {
+//     id: 1,
+//     name: "Hamid",
+//     role: "ADMIN",
+//     age: 18,
+//     isActive: true,
+//   },
+//   {
+//     id: 2,
+//     name: "Gara",
+//     role: "EDITOR",
+//     age: 19,
+//     isActive: false,
+//   },
+//   {
+//     id: 3,
+//     name: "Mohammad",
+//     role: "TEACHER",
+//     age: 17,
+//     isActive: true,
+//   },
+// ];
+
+// const newUser = users.map((user) => {
+//   return {
+//     ...user,
+//     msg: `Hello ${user.name} yor profile is ${
+//       user.isActive ? "active" : "Not Avtive"
+//     } and your role ${user.role}`,
+//   };
+// });
+// console.log(newUser);
+
+//! challnge of filter
+// const id = 3;
+// users.filter((user) => {
+//   user.id !== id;
+// });
+// console.log(users);
+
+//* and also we can write like this:
+// function filterUser(users, id) {
+//   const filtredUser = users.filter((user) => user.id !== id);
+//   return filtredUser;
+// }
+// console.log(filterUser(users, 3));
+
+//! reduce and challenge
+const product = [
+  {
+    title: "P-1",
+    price: "88.54$",
+    qty: 5,
+  },
+  {
+    title: "P-2",
+    price: "56.22$",
+    qty: 2,
+  },
+  {
+    title: "P-3",
+    price: "88.99$",
+    qty: 3,
+  },
+  {
+    title: "P-4",
+    price: "122.45$",
+    qty: 1,
+  },
+];
+
+const totalPrice = product.reduce((acc, curr) => {
+  const price = Number(curr.price.split("$")[0]) * curr.qty;
+  return acc + price;
+}, 0);
+console.log(totalPrice);
