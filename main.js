@@ -1101,31 +1101,53 @@ const courses = ["React.js", "Vue.js", "Next.js", "Node.js"];
 // console.log(filterUser(users, 3));
 
 //! reduce and challenge
-const product = [
-  {
-    title: "P-1",
-    price: "88.54$",
-    qty: 5,
-  },
-  {
-    title: "P-2",
-    price: "56.22$",
-    qty: 2,
-  },
-  {
-    title: "P-3",
-    price: "88.99$",
-    qty: 3,
-  },
-  {
-    title: "P-4",
-    price: "122.45$",
-    qty: 1,
-  },
-];
+// const product = [
+//   {
+//     title: "P-1",
+//     price: "88.54$",
+//     qty: 5,
+//   },
+//   {
+//     title: "P-2",
+//     price: "56.22$",
+//     qty: 2,
+//   },
+//   {
+//     title: "P-3",
+//     price: "88.99$",
+//     qty: 3,
+//   },
+//   {
+//     title: "P-4",
+//     price: "122.45$",
+//     qty: 1,
+//   },
+// ];
 
-const totalPrice = product.reduce((acc, curr) => {
-  const price = Number(curr.price.split("$")[0]) * curr.qty;
-  return acc + price;
-}, 0);
-console.log(totalPrice);
+// const totalPrice = product.reduce((acc, curr) => {
+//   const price = Number(curr.price.split("$")[0]) * curr.qty;
+//   return acc + price;
+// }, 0);
+// console.log(totalPrice);
+
+//? Chllenge of calc average and chain methods
+const userMark = [10, 15, 14, , 11, 17, 15];
+
+const ave = userMark.reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
+console.log(ave.toFixed(2));
+
+const passAve = userMark
+  .filter((n) => n >= 10)
+  .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
+console.log(passAve.toFixed(2));
+
+const shiftAve = userMark
+  .map((n) => n + 3)
+  .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
+console.log(shiftAve.toFixed(2));
+
+const shiftPassAve = userMark
+  .map((n) => n + 3)
+  .filter((n) => n >= 10)
+  .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
+console.log(shiftPassAve.toFixed(2));
