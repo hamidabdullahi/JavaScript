@@ -1023,7 +1023,7 @@
 //* 3 at
 // console.log(arr.at(-1));
 
-const courses = ["React.js", "Vue.js", "Next.js", "Node.js"];
+// const courses = ["React.js", "Vue.js", "Next.js", "Node.js"];
 
 // const newCourses = [];
 // courses.forEach((course, index) => {
@@ -1131,23 +1131,99 @@ const courses = ["React.js", "Vue.js", "Next.js", "Node.js"];
 // console.log(totalPrice);
 
 //? Chllenge of calc average and chain methods
-const userMark = [10, 15, 14, , 11, 17, 15];
+// const userMark = [10, 15, 14, , 11, 17, 15];
 
-const ave = userMark.reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
-console.log(ave.toFixed(2));
+// const ave = userMark.reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
+// console.log(ave.toFixed(2));
 
-const passAve = userMark
-  .filter((n) => n >= 10)
-  .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
-console.log(passAve.toFixed(2));
+// const passAve = userMark
+//   .filter((n) => n >= 10)
+//   .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
+// console.log(passAve.toFixed(2));
 
-const shiftAve = userMark
-  .map((n) => n + 3)
-  .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
-console.log(shiftAve.toFixed(2));
+// const shiftAve = userMark
+//   .map((n) => n + 3)
+//   .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
+// console.log(shiftAve.toFixed(2));
 
-const shiftPassAve = userMark
-  .map((n) => n + 3)
-  .filter((n) => n >= 10)
-  .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
-console.log(shiftPassAve.toFixed(2));
+// const shiftPassAve = userMark
+//   .map((n) => n + 3)
+//   .filter((n) => n >= 10)
+//   .reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);
+// console.log(shiftPassAve.toFixed(2));
+
+//? challenge of find | findOf
+// const product = [
+//   {
+//     title: "P-1",
+//     price: "88.54$",
+//     qty: 5,
+//   },
+//   {
+//     title: "P-2",
+//     price: "56.22$",
+//     qty: 2,
+//   },
+//   {
+//     title: "P-3",
+//     price: "88.99$",
+//     qty: 3,
+//   },
+//   {
+//     title: "P-4",
+//     price: "122.45$",
+//     qty: 1,
+//   },
+// ];
+
+// function filterProduct(product, title) {
+//   const filteredProduct = product.filter((p) => p.title !== title);
+//   return filteredProduct;
+// }
+// console.log(filterProduct(product, "P-2"));
+
+//! Sort method
+
+// const number = [1, 5, 1000, 30, 4];
+
+// const sortNumber = number.sort((a, b) => {
+//   if (a > b) return -1; //* bigger to smaller = -1
+//   if (a < b) return 1; //* smaller to bugger = 1
+// });
+// console.log(sortNumber);
+
+//* we can write like this:
+
+// const asendingNumber = number.sort((a, b) => a - b);
+// const desceingNumber = number.sort((a, b) => b - a);
+// console.log(desceingNumber);
+
+//! Math
+
+// console.log(Math.floor(23.2));
+// console.log(Math.floor(23.9));
+// console.log(Math.floor(-23.9));
+
+// console.log(Math.ceil(23.2));
+// console.log(Math.ceil(23.9));
+
+// console.log(Math.round(23.2));
+// console.log(Math.round(23.9));
+
+// console.log(Math.trunc(23.2));
+// console.log(Math.trunc(23.9));
+// console.log(Math.trunc(-23.9));
+
+// console.log(Math.pow(2, 3));
+
+// console.log(Math.sqrt(36));
+
+// console.log((25.2658).toFixed(2));
+
+//* challenge of ath method
+// const betweenNumber = (min, max) => {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// };
+// console.log(betweenNumber(1, 20));
